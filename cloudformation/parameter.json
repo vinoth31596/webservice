@@ -86,11 +86,11 @@
     },
     {
         "ParameterKey": "AwsAccessKey",
-        "ParameterValue": "AKIAYV3O5ORLK5G5FDUE"
+        "ParameterValue": ""
     },
     {
         "ParameterKey": "AwsSecretKey",
-        "ParameterValue": "CVIoDm2hZlLxP07uEGDi70hFhB7haCSoSfX/rNSV"
+        "ParameterValue": ""
     },
     {
         "ParameterKey": "DBInstanceIdentifier",
