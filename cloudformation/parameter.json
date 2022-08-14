@@ -1,0 +1,131 @@
+[
+    {
+        "ParameterKey": "VpcCidrBlock",
+        "ParameterValue": "10.0.0.0/16"
+    },
+    {
+        "ParameterKey": "SubnetReOne",
+        "ParameterValue": "us-east-1a"
+    },
+    {
+        "ParameterKey": "SubnetReTwo",
+        "ParameterValue": "us-east-1b"
+    },
+    {
+        "ParameterKey": "SubnetReThree",
+        "ParameterValue": "us-east-1c"
+    },
+    {
+        "ParameterKey": "SubnetPrivateReOne",
+        "ParameterValue": "us-east-1a"
+    },
+    {
+        "ParameterKey": "SubnetPrivateReTwo",
+        "ParameterValue": "us-east-1b"
+    },
+    {
+        "ParameterKey": "SubnetPrivateReThree",
+        "ParameterValue": "us-east-1c"
+    },
+    {
+        "ParameterKey": "SubnetReOneName",
+        "ParameterValue": "Subnet-1"
+    },
+    {
+        "ParameterKey": "SubnetReTwoName",
+        "ParameterValue": "Subnet-2"
+    },
+    {
+        "ParameterKey": "SubnetReThreeName",
+        "ParameterValue": "Subnet-3"
+    },
+    {
+        "ParameterKey": "SubnetPrivateReOneName",
+        "ParameterValue": "Subnet-1-Private"
+    },
+    {
+        "ParameterKey": "SubnetPrivateReTwoName",
+        "ParameterValue": "Subnet-2-Private"
+    },
+    {
+        "ParameterKey": "SubnetPrivateReThreeName",
+        "ParameterValue": "Subnet-3-Private"
+    },
+    {
+        "ParameterKey": "SubnetReOneCIDR",
+        "ParameterValue": "10.0.0.0/28"
+    },
+    {
+        "ParameterKey": "SubnetReTwoCIDR",
+        "ParameterValue": "10.0.0.16/28"
+    },
+    {
+        "ParameterKey": "SubnetReThreeCIDR",
+        "ParameterValue": "10.0.0.32/28"
+    },
+    {
+        "ParameterKey": "SubnetPrivateReOneCIDR",
+        "ParameterValue": "10.0.0.48/28"
+    },
+    {
+        "ParameterKey": "SubnetPrivateReTwoCIDR",
+        "ParameterValue": "10.0.0.64/28"
+    },
+    {
+        "ParameterKey": "SubnetPrivateReThreeCIDR",
+        "ParameterValue": "10.0.0.80/28"
+    },
+    {
+        "ParameterKey": "KeyName",
+        "ParameterValue": "mykey"
+    },
+    {
+        "ParameterKey": "AMI",
+
+        "ParameterValue": "ami-0615ffa01c734b1ac"
+    },
+    {
+        "ParameterKey": "AwsAccessKey",
+        "ParameterValue": "AKIAYV3O5ORLK5G5FDUE"
+    },
+    {
+        "ParameterKey": "AwsSecretKey",
+        "ParameterValue": "CVIoDm2hZlLxP07uEGDi70hFhB7haCSoSfX/rNSV"
+    },
+    {
+        "ParameterKey": "DBInstanceIdentifier",
+        "ParameterValue": "csye6225"
+    },
+    {
+        "ParameterKey": "DbUserName",
+        "ParameterValue": "csye6225"
+    },
+    {
+        "ParameterKey": "DbPassword",
+        "ParameterValue": "hellohihi"
+    },
+    {
+        "ParameterKey": "DbPort",
+        "ParameterValue": "3306"
+    },
+    {
+        "ParameterKey": "DbName",
+        "ParameterValue": "csye6225"
+    },
+    {
+        "ParameterKey": "S3BucketName",
+        "ParameterValue": "dev.domain.tld"
+    },
+    {
+        "ParameterKey": "S3BucketRegion",
+        "ParameterValue": "us-east-1"
+    },
+    {
+        "ParameterKey": "rootUname",
+        "ParameterValue": "csye6225"
+    },
+    {
+        "ParameterKey": "rootPWD",
+        "ParameterValue": "hellohihi"
+    }
+]

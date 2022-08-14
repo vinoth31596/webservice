@@ -1,0 +1,67 @@
+{
+    "variables": {
+        "aws_access_key": "AKIAZLVSDUJZ465X6REB",
+        "aws_secret_key": "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",
+        "aws_region": "us-east-1",
+        "source_ami": "ami-033b95fb8079dc481",
+        "ssh_username": "ec2-user"
+    },
+    "builders": [
+        {
+            "type": "amazon-ebs",
+            "profile": "dev",
+            "access_key": "{{user `aws_access_key`}}",
+            "secret_key": "{{user `aws_secret_key`}}",
+            "region": "{{user `aws_region`}}",
+            "instance_type": "t2.micro",
+            "subnet_id": "{{user `subnet_id`}}",
+            "source_ami": "{{user `source_ami`}}",
+            "ssh_username": "{{user `ssh_username`}}",
+            "ami_name": "csye6225_{{timestamp}}",
+            "ami_description": "Linux2 AMI for CSYE 6225",
+            "ami_users": ["643544883827", "596696200278"],
+            "ami_block_device_mappings": [
+                {
+                "delete_on_termination": true,
+                "device_name": "/dev/xvda",
+                "volume_size": 20,
+                "volume_type": "gp2"
+                }
+                ],
+            "tags" : {
+                "Tool" : "Packer",
+                "Author" : "user",
+                "Environment" : "dev"
+                }
+    }
+    ],
+    "provisioners": [
+        {
+            "type": "shell",
+            "environment_vars": [
+                "FOO=foo"
+            ],
+            "script": "script.sh"
+        },
+        {
+            "type" : "file",
+            "source" : "./",
+            "destination": "/home/ec2-user/baseapplication"
+        },
+        {
+            "type": "shell",
+            "inline": [
+                "sudo /opt/aws/amazon-cloudwatch-agent/bin/amazon-cloudwatch-agent-ctl -a fetch-config -m ec2 -c file:/home/ec2-user/baseapplication/cloud-watch/amazon-cloudwatch-agent.json -s",
+                "cd /home/ec2-user/baseapplication",
+                "sudo npm install",
+                "sudo pm2 start app.js",
+                "sudo pm2 startup systemd",
+                "sudo pm2 save",
+                "sudo ln -s /home/ec2-user/baseapplication/node-service.service /etc/systemd/system/node-service.service",
+                "sudo systemctl daemon-reload",
+                "sudo systemctl enable node-service.service",
+                "sudo systemctl start node-service.service"
+            ]
+        }
+    ]
+}
