@@ -1,7 +1,6 @@
 const AWS = require('aws-sdk');
 require("dotenv").config();
 
-
 AWS.config.region = "us-east-1";
 AWS.config.credentials = new AWS.EC2MetadataCredentials({
     httpOptions: { timeout: 5000 },
